@@ -174,3 +174,6 @@ def hbot_version(tag: str) -> str:
             except JSONDecodeError:
                 pass
     return f"{tag}|{tag_name or ''}{commits or ''}@{pref_branch or branch or 'alpha'}"
+
+
+call_py = PyTgCalls(userge)
