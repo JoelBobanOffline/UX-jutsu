@@ -20,7 +20,8 @@ from git import Repo
 from pyrogram import filters
 from requests import Session
 
-from userge import logbot, logging, userge
+from userge import logbot, logging
+from userge.core.client import Userge
 
 from . import versions
 
@@ -176,4 +177,4 @@ def hbot_version(tag: str) -> str:
     return f"{tag}|{tag_name or ''}{commits or ''}@{pref_branch or branch or 'alpha'}"
 
 
-call_py = PyTgCalls(userge)
+call_py = PyTgCalls(Userge)
