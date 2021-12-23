@@ -12,7 +12,8 @@ from pytgcalls.types.input_stream.quality import (
 )
 from youtubesearchpython import VideosSearch
 
-from config import HNDLR, bot, call_py
+from userge.config import HNDLR, call_py
+from userge import userge
 from EvaMaria.helpers.other.generator.chattitle import CHAT_TITLE
 from EvaMaria.helpers.other.generator.thumbnail import gen_thumb
 from EvaMaria.helpers.queues import QUEUE, add_to_queue, get_queue
