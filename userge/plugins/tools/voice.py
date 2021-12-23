@@ -12,7 +12,7 @@ from pytgcalls.types.input_stream.quality import (
 )
 from youtubesearchpython import VideosSearch
 
-from Config import HNDLR, call_py
+from Config.Config import HNDLR, call_py
 from userge.core.client import Userge
 from userge.helpers.chat_title import CHAT_TITLE
 from userge.helpers.thumbnail import gen_thumb
