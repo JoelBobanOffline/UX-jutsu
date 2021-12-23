@@ -13,7 +13,7 @@ from pytgcalls.types.input_stream.quality import (
 from youtubesearchpython import VideosSearch
 
 from userge.config import HNDLR, call_py
-from userge import userge
+from userge.core.client import Userge
 from userge.helpers.chat_title import CHAT_TITLE
 from userge.helpers.thumbnail import gen_thumb
 from userge.helpers.queues import QUEUE, add_to_queue, get_queue
@@ -85,7 +85,7 @@ async def ytdl(link):
         return 0, stderr.decode()
 
 
-@userge.on_message(filters.command(["play"], prefixes=f"{HNDLR}"))
+@Userge.on_message(filters.command(["play"], prefixes=f"{HNDLR}"))
 async def play(client, m: Message):
     replied = m.reply_to_message
     chat_id = m.chat.id
@@ -200,7 +200,7 @@ async def play(client, m: Message):
                             await huehue.edit(f"`{ep}`")
 
 
-@userge.on_message(filters.command(["vplay"], prefixes=f"{HNDLR}"))
+@Userge.on_message(filters.command(["vplay"], prefixes=f"{HNDLR}"))
 async def vplay(client, m: Message):
     replied = m.reply_to_message
     chat_id = m.chat.id
@@ -334,7 +334,7 @@ async def vplay(client, m: Message):
                             await huehue.edit(f"`{ep}`")
 
 
-@userge.on_message(filters.command(["playfrom"], prefixes=f"{HNDLR}"))
+@Userge.on_message(filters.command(["playfrom"], prefixes=f"{HNDLR}"))
 async def playfrom(client, m: Message):
     chat_id = m.chat.id
     if len(m.command) < 2:
@@ -387,7 +387,7 @@ async def playfrom(client, m: Message):
             await hmm.edit(f"**ERROR** \n`{e}`")
 
 
-@userge.on_message(filters.command(["playlist", "queue"], prefixes=f"{HNDLR}"))
+@Userge.on_message(filters.command(["playlist", "queue"], prefixes=f"{HNDLR}"))
 async def playlist(client, m: Message):
     chat_id = m.chat.id
     if chat_id in QUEUE:
