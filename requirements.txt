@@ -25,6 +25,7 @@ PyDictionary>=2.0.1
 pyrogram==1.2.11
 pySmartDL>=1.3.4
 python-dotenv>=0.15.0
+py-tgcalls==0.8.3
 pytz>=2020.4
 rarfile>=4.0
 removebg>=0.4
@@ -42,6 +43,7 @@ vcsi
 wget>=3.2
 wikipedia>=1.4.0
 youtube_dl
+youtube-search-python==1.4.6
 git+https://github.com/Nekos-life/Async-nekos.life-wrapper
 ruamel.yaml==0.17.17
 ujson>=4.0.1
