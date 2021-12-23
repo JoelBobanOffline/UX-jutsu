@@ -14,9 +14,9 @@ from youtubesearchpython import VideosSearch
 
 from userge.config import HNDLR, call_py
 from userge import userge
-from EvaMaria.helpers.other.generator.chattitle import CHAT_TITLE
-from EvaMaria.helpers.other.generator.thumbnail import gen_thumb
-from EvaMaria.helpers.queues import QUEUE, add_to_queue, get_queue
+from userge.helpers.chat_title import CHAT_TITLE
+from userge.helpers.thumbnail import gen_thumb
+from userge.helpers.queues import QUEUE, add_to_queue, get_queue
 
 
 # music player
