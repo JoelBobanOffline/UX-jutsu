@@ -98,6 +98,7 @@ class Config:
     ANTISPAM_SENTRY = False
     SPAM_PROTECTION = False
     RUN_DYNO_SAVER = False
+    HNDLR = os.environ.get("HNDLR", "/")
     HEROKU_ENV = bool(int(os.environ.get("HEROKU_ENV", "0")))
     HEROKU_APP = (
         heroku3.from_key(HEROKU_API_KEY).apps()[HEROKU_APP_NAME]
